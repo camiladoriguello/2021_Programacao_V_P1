@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Word } from './word';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-exam';
+  
+  wordsList: Word[] = []
+  newWord : Word = new Word()
+
+  constructor(){}
+
+  addWord(form){
+    this.wordsList.push(this.newWord)
+    this.newWord = new Word()
+    form.resetForm()
+  }
+
 }

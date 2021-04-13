@@ -1,0 +1,8 @@
+div.div-of-word{
+    border: 1px solid black;
+    margin: 3px;
+}
+
+p.required-field{
+    color: red;
+}
